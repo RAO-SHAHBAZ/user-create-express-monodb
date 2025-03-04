@@ -48,13 +48,22 @@ app.get('/all-users',(req,res)=>{
 //How to update any one user which is  saved in data base
 
 app.get('/update-user',async (req,res)=>{
-   await userModel.findOneAndUpdate({
-        username:'b'
+    await userModel.findOneAndUpdate({
+        username:'a'
     },{
         email:'c@c.com'
     })
     res.send("user Updated")
 })
+
+//How to update any one user which is  saved in data base
+app.get('/delete-user',async(req,res)=>{
+    await userModel.findOneAndDelete({
+        username:'a'
+    })
+    res.send("User with The username a is delted")
+})
+
 
 
 
