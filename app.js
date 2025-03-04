@@ -25,12 +25,12 @@ app.post('/get-form-data',(req,res)=>{
 app.post('/register', async (req,res)=>{
     const {username , email , password} = req.body
 
-  const user = await  userModel.create({
+  const newUser = await  userModel.create({
         username:username,
         email:email,
         password:password
     })
-    res.send(user)
+    res.send(newUser)
 })
 
 app.get('/register',(req,res)=>{
