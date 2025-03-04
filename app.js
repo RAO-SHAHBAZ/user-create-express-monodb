@@ -33,8 +33,17 @@ app.post('/register', async (req,res)=>{
     res.send(newUser)
 })
 
+
 app.get('/register',(req,res)=>{
     res.render("rejister")
+})
+
+//How to read All the Users Which is saved in data base
+
+app.get('/all-users',(req,res)=>{
+    userModel.find().then((users)=>{
+        res.send(users)
+    })
 })
 
 app.listen(3000)
