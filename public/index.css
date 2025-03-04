@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 100px;
+    
+}
+legend{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 50px;
+}
+
+input{
+
+    background-color: azure;
+    border: none;
+    font-size: 50px;
+}
+button{
+    font-size: 80px;
+}
