@@ -45,5 +45,17 @@ app.get('/all-users',(req,res)=>{
         res.send(users)
     })
 })
+//How to update any one user which is  saved in data base
+
+app.get('/update-user',async (req,res)=>{
+   await userModel.findOneAndUpdate({
+        username:'b'
+    },{
+        email:'c@c.com'
+    })
+    res.send("user Updated")
+})
+
+
 
 app.listen(3000)
